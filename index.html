@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favi.png">
+</head>
+<body>
+    <div id="main_section">
+        <div id="btn_container">
+            <button id="btn_pomodoro" class="btn">pomodoro</button>
+            <button id="btn_short" class="btn">short break</button>
+            <button id="btn_large"class="btn">large break</button>
+        </div>
+            <h1 id="timer"></h1>
+        <div id="setting_container">
+            <button id="btn_start"class="btn">start</button>
+            <button id="btn_reset"class="btn"></button>
+            <button id="btn_settings"class="btn"></button>
+
+
+    </div>
+
+</div>
+<div id="form_settings" class="form">
+    <div class="form_content">
+        <span class="close">&times;</span>
+        <h2>Timer settings</h2>
+        <!-- Formulaire de paramétrage -->
+        <div id="timeSegmentsForm">
+            <label for="pomodoro_input">pomodoro</label>
+            <input type="number" min="0" id="pomodoro_input" value="25">
+            <br>
+            <label for="short_break_input">short break</label>
+            <input type="number" min="0" id="short_break_input" value="15">
+            <br>
+            <label for="long_break_input">long break</label>
+            <input type="number"  min="0" id="long_break_input" value="30" >
+            <br>
+            <label for="aura_select">aura color</label>
+            <select id="aura_select">
+                <option value="./assets/default.jpg" data-image="./assets/default.jpg">Light green</option>                
+                <option value="./assets/blue.png" data-image="./assets/blue.png">Blue/green</option>               
+                <option value="./assets/dark_blue.png" data-image="./assets/dark_blue.png">Dark blue</option>                
+                <option value="./assets/grey.png" data-image="./assets/grey.png">Grey</option>
+                <option value="./assets/light_blue.png" data-image="./assets/light_blue.png">Light blue</option>
+                <option value="./assets/light_purple.png" data-image="./assets/light_purple.png">Light purple</option>
+
+                <option value="./assets/orange_bg.png" data-image="./assets/orange_bg.png">Orange</option>                
+                <option value="./assets/pale_green.png" data-image="./assets/pale_green.png">Pale green</option>               
+                <option value="./assets/pink.png" data-image="./assets/pink.png">Pink</option>                
+                <option value="./assets/purple.png" data-image="./assets/purple.png">Purple</option>
+                <option value="./assets/purple_orange.png" data-image="./assets/purple_orange.png">Purple/orange</option>
+                <option value="./assets/warm_pink.png" data-image="./assets/warm_pink.png">Warm pink</option>
+                               
+
+
+            </select>
+            <div id="aura_preview_container">
+                <img id="aura_preview" src="./assets/default.jpg" alt="Preview">
+            </div>
+            <button id="sub_btn"  class="btn">Save</button>
+        </div>
+    </div>
+</div>
+
+<div id="github_popup">
+    <span class="close_popup">&times;</span>
+    <a href="https://github.com/kaachyyy" target="_blank">check my GitHub  &lt;3 </a>
+</div>
+
+<script src="script.js"></script> 
+</body>
+</html>

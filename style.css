@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Sogdian&display=swap');
+body{
+    
+    display: flex;
+    height: 100vh;
+    
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    --foreground-color: #fff;
+    background-image: url('./assets/default.jpg');
+    background-size: cover;
+    
+}
+
+#main_section {
+    /* Optionnel : taille fixe pour démonstration */
+    margin-top: 15%;
+    margin-left: 50px;
+    justify-content: center; 
+    align-items: center;
+    border-style: none; 
+    align-items: center;
+    text-align: center;
+   
+}
+
+#btn_container{
+    justify-self: center;
+    display: list-item;
+    list-style: none;
+    justify-content: space-between;
+    gap: 10px;
+    
+    
+    
+    
+
+}
+
+
+#setting_container{
+
+   margin-left: -70px;
+ 
+
+}
+
+#timer{
+    padding-left: -5%;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 150px;
+    font-family: "Lora", serif;
+    font-weight: 500;
+    font-size: 700;
+}
+
+.btn{
+
+    padding: 15px 30px; /* Taille des boutons */
+    cursor: pointer; /* Change le curseur en pointeur pour indiquer cliquable */
+    color: white; /* Couleur du texte */
+    border-radius: 30px; /* Coins arrondis */
+    border-color: white;
+    border-style:solid;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    transition: background-color 0.3s, transform 0.4s; /* Transition pour le survol */
+    font-size: 40px; 
+    background: none;
+    height: fit-content;
+  
+    
+    
+}
+
+
+
+
+.btn:hover{
+background-color:rgba(130, 132, 216, 0.1); ; /* Change la couleur de fond au survol */
+    transform: scale(1.025); /* Agrandir légèrement au survol */
+}
+
+
+.btn:active{
+background-color: #ffffff; /* Change la couleur de fond lors du clic */
+    transform: scale(0.97); /* Réduire légèrement lors du clic */
+    color: palevioletred;
+}
+
+
+
+
+#setting_container{
+    justify-self: center;
+    display: list-item;
+    list-style: none;
+    justify-content: space-between;
+    gap: 10px;
+    
+    
+}
+
+#setting_container .btn{
+
+    margin-top: -30%;
+    height: 70px;
+}
+
+#btn_reset{
+    background-image: url("./assets/reset_icon.png");
+    background-size: cover;
+    width: 70px;
+    
+    
+    
+}
+
+
+#btn_settings{
+    background-image:  url(./assets/settings.png);
+    background-size: cover;
+    width: 70px;
+}
+
+/* Styles pour la fenêtre modale */
+.form {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s;
+}
+
+.form_content {
+    background-color: rgba(214, 219, 245, 0.85);
+    margin: 15% auto;
+    padding: 20px;
+    border: none;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    animation: slideIn 0.5s;
+}
+
+#sub_btn{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-image: none;
+    border-color: #ffffff;
+    border-style: solid;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+
+}
+
+#sub_btn:hover {
+    background-color: #ffffff;
+    transform: scale(1.02);
+    color: palevioletred;
+}
+
+#sub_btn:active {
+    background-color: #ffffff;
+    transform: scale(0.98);
+        color: palevioletred;
+
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: palevioletred;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideIn {
+    from {transform: translateY(-100px);}
+    to {transform: translateY(0);}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes slideOut {
+    from {transform: translateY(0);}
+    to {transform: translateY(-100px);}
+}
+
+
+.form.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+.form-content.slide-out {
+    animation: slideOut 0.5s forwards;
+
+}
+
+.form_content label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+}
+
+
+
+#aura_preview_container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#aura_preview {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.form_content input[type="number"],
+.form_content select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+.form_content input[type="number"]:focus,
+.form_content select:focus {
+    border-color: #555;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+#github_popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(239, 190, 238, 0.85);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto Mono", monospace;
+    font-weight: 600;
+    z-index: 1000;
+    transition: transform 0.3s, opacity 0.3s;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0;  /* Initialement invisible */
+    transform: translateY(20px);  /* Légèrement décalé */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#github_popup a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#github_popup:hover {
+    transform: translateY(0);
+    opacity: 0.9;
+}
+
+#github_popup .close_popup {
+    color: #d1399f;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+#github_popup.show {
+    opacity: 1;
+    transform: translateY(0);
+}
